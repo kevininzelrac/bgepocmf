@@ -1,0 +1,106 @@
+main[data-cognitive],
+main[data-cognitive] * {
+  all: unset;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+main[data-cognitive] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.3rem;
+  width: 100%;
+  height: 100%;
+
+  --primary: green;
+  --copy: #333;
+  --background: ghostwhite;
+
+  border: solid var(--primary);
+  background: var(--background);
+}
+
+main[data-cognitive] > i {
+  font-style: italic;
+}
+main[data-cognitive] > h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+main[data-cognitive] a {
+  text-decoration: none;
+  color: var(--contrast);
+  font-weight: bold !important;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
+  cursor: pointer;
+}
+
+main[data-cognitive] a:hover {
+  color: var(--primary);
+}
+
+main[data-cognitive] a.active {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+main[data-cognitive] button {
+  cursor: pointer;
+  background: var(--primary);
+  color: ghostwhite;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+}
+
+main[data-cognitive] > nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  gap: 1rem;
+}
+
+main[data-cognitive] > article {
+  border: 1px solid gainsboro;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+main[data-cognitive] > article > nav {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+main[data-cognitive] > article > section {
+  border: 1px solid gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+main[data-cognitive] > article > section > nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  gap: 1rem;
+}
