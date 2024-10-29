@@ -62,6 +62,16 @@ main[data-cognitive] button {
   width: fit-content;
 }
 
+main[data-cognitive] > header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  & > h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}
 main[data-cognitive] > nav {
   display: flex;
   flex-direction: row;
