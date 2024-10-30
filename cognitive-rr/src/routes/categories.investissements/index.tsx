@@ -1,3 +1,10 @@
+import Back from "../../components/back";
+
 export default function Investissements() {
-  return <p>Investissements</p>;
+  return (
+    <section>
+      <Back />
+      <p> Investissements</p>
+    </section>
+  );
 }

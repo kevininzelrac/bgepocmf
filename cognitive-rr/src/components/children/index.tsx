@@ -1,18 +1,20 @@
 import { Navigate } from "react-router-dom";
 
 import Categories from "../../routes/categories";
-/*  */ import Synthese from "../../routes/categories.synthese";
+/*  */ import Categories_Index from "../../routes/categories._index";
 /*  */ import Produits from "../../routes/categories.produits";
 /*  */ import Charges from "../../routes/categories.charges";
 /*    */ import Variables from "../../routes/categories.charges.variables";
 /*    */ import Fixes from "../../routes/categories.charges.fixes";
-/*    */ import Dirigeants from "../../routes/categories.charges.dirigeants";
+/*    */ import Dirigeant from "../../routes/categories.charges.dirigeant";
 /*    */ import Salaries from "../../routes/categories.charges.salaries";
 /*  */ import Investissements from "../../routes/categories.investissements";
 /*  */ import Financements from "../../routes/categories.financements";
-/*  */ import BFR from "../../routes/categories.BFR";
+/*    */ import Long_terme from "../../routes/categories.financements.long_terme";
+/*    */ import BFR from "../../routes/categories.financements.BFR";
 /*  */ import Juridique from "../../routes/categories.juridique";
-/*  */ import Fiscalite from "../../routes/categories.fiscalite";
+/*     */ import Statut from "../../routes/categories.juridique.statut";
+/*     */ import TVA from "../../routes/categories.juridique.tva";
 import Tableau from "../../routes/tableau";
 
 const children = [
@@ -21,8 +23,7 @@ const children = [
     path: "categories",
     element: <Categories />,
     children: [
-      { index: true, element: <Navigate to="synthese" replace /> },
-      { path: "synthese", element: <Synthese /> },
+      { index: true, element: <Categories_Index /> },
       { path: "produits", element: <Produits /> },
       {
         path: "charges",
@@ -31,15 +32,29 @@ const children = [
           { index: true, element: <Navigate to="variables" replace /> },
           { path: "variables", element: <Variables /> },
           { path: "fixes", element: <Fixes /> },
-          { path: "dirigeants", element: <Dirigeants /> },
+          { path: "dirigeant", element: <Dirigeant /> },
           { path: "salaries", element: <Salaries /> },
         ],
       },
       { path: "investissements", element: <Investissements /> },
-      { path: "financements", element: <Financements /> },
-      { path: "bfr", element: <BFR /> },
-      { path: "juridique", element: <Juridique /> },
-      { path: "fiscalite", element: <Fiscalite /> },
+      {
+        path: "financements",
+        element: <Financements />,
+        children: [
+          { index: true, element: <Navigate to="long_terme" replace /> },
+          { path: "long_terme", element: <Long_terme /> },
+          { path: "bfr", element: <BFR /> },
+        ],
+      },
+      {
+        path: "juridique",
+        element: <Juridique />,
+        children: [
+          { index: true, element: <Navigate to="statut" replace /> },
+          { path: "statut", element: <Statut /> },
+          { path: "tva", element: <TVA /> },
+        ],
+      },
     ],
   },
   { path: "tableau", element: <Tableau /> },

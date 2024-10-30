@@ -28,18 +28,17 @@ main[data-cognitive] {
 main[data-cognitive] > i {
   font-style: italic;
 }
+
 main[data-cognitive] > h2 {
   font-size: 1.6rem;
   font-weight: bold;
 }
 
 main[data-cognitive] a {
-  text-decoration: none;
-  color: var(--contrast);
-  font-weight: bold !important;
-  transition: all 0.2s ease-in-out;
-  width: fit-content;
   cursor: pointer;
+  color: var(--contrast);
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 
 main[data-cognitive] a:hover {
@@ -66,12 +65,13 @@ main[data-cognitive] > header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   & > h2 {
     font-size: 1.6rem;
     font-weight: bold;
   }
 }
+
 main[data-cognitive] > nav {
   display: flex;
   flex-direction: row;
@@ -91,11 +91,26 @@ main[data-cognitive] > article {
 }
 
 main[data-cognitive] > article > nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-content: space-evenly;
+  width: 100%;
+  height: fit-content;
+}
+
+main[data-cognitive] > article > nav > a {
   display: flex;
-  flex-direction: column;
-  width: fit-content;
-  height: 100%;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gainsboro;
+  border-radius: 1rem;
+  height: 200px;
+  margin: 0.3rem;
+}
+
+main[data-cognitive] > article > nav > a:hover {
+  border: 1px solid var(--primary);
 }
 
 main[data-cognitive] > article > section {

@@ -4,7 +4,7 @@ export default function Modele() {
   return (
     <>
       <Back />
-      <p>Modèle économique</p>
+      <p>Le modèle économique</p>
     </>
   );
 }

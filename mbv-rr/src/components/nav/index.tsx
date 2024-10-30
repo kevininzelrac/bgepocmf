@@ -6,7 +6,7 @@ const menu = [
   { title: "Mon Parcours", to: "parcours" },
   { title: "Mes Outils", to: "outils" },
   { title: "Mon Réseau", to: "reseau" },
-  { title: "Mes actualités & évènements", to: "actus" },
+  { title: "Mes Actualités & Évènements", to: "actus" },
 ];
 export default function Nav() {
   return (

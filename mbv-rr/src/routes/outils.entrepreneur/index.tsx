@@ -4,7 +4,7 @@ export default function Entrepreneur() {
   return (
     <>
       <Back />
-      <p>Entrepreneur</p>
+      <p>L'Entrepreneur</p>
     </>
   );
 }

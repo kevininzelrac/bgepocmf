@@ -71,4 +71,20 @@ main > article > nav {
   justify-content: flex-start;
   width: 100%;
   height: fit-content;
+  border: 1px solid gainsboro;
+}
+
+main > article > nav > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gainsboro;
+  border-radius: 1rem;
+  width: 33%;
+  height: 200px;
+  margin: 0.3rem;
+}
+
+main > article > nav > a:hover {
+  border: 1px solid var(--primary);
 }

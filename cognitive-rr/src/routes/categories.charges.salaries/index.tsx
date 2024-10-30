@@ -1,3 +1,3 @@
 export default function Salaries() {
-  return <p>Salaire salariés</p>;
+  return <p>Rémunération salariés</p>;
 }
