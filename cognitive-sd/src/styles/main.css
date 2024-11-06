@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:host {
+  border: dashed green !important;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: green;
+  font-size: 1.5rem;
+}
+
+a,
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+main,
+article,
+section,
+nav,
+div,
+span,
+p {
+  border: 1px solid green;
+  padding: 0.2rem;
+}
+
+i {
+  font-style: italic;
+}
